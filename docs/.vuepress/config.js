@@ -1,30 +1,44 @@
 module.exports = {
-  title: "VuePress Starter Template",
-  description: "Starter Template for Documentation Website",
-  base: "/vuepress-starter-template/",
+  title: "Docs",
+  description: "Mock Docs for Raspiblitz",
+  base: "/raspiblitz-docs-example/",
+  head: [
+    ["link", { rel: "icon", href: '/images/favicon.ico' }],
+  ],
   themeConfig: {
     navbar: true,
     nav: [
-      { text: "GitHub", link: ""},
+      { text: "GitHub", link: "https://github.com/rootzoll/raspiblitz"},
       { text: "Website", link: ""}
     ],
-    logo: "/images/logo.png",
+    logo: "/images/logos/logo.png",
     sidebarDepth: 0,
     sidebar: [
       {
         collapsable: true,
         title: "Getting Started",
         children: [
-          ["getting-started/introduction", 'Introduction'],
           ["getting-started/getting-started", 'Getting Started'],
+          ["getting-started/features.md", 'Features'],
+          ["getting-started/mobile.md", 'Mobile'],
+          ["getting-started/support.md", 'Support'],
         ]
       },
       {
         collapsable: true,
-        title: "Section 1",
+        title: "Workshop",
         children: [
-          ["/section1/page0", 'First Page'],
-          ["/section1/page1", 'Second Page'],
+          ["/workshop/intro.md", 'Introduction & Time Planning'],
+          ["/workshop/3-scenarios.md", 'Different Workshop Scenarios'],
+          ["/workshop/checklist.md", 'Checklist'],
+          ["/workshop/running-workshop.md", 'Running the Workshop'],
+        ]
+      },
+      {
+        collapsable: true,
+        title: "FAQ",
+        children: [
+          ["/FAQ/main.md", 'Main'],
         ]
       },
     ],
